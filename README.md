@@ -1,3 +1,3 @@
 # cors
 
-## OMG Conflict
+## Demo Conflict
