@@ -6,11 +6,11 @@ const cors = require('cors');
 
 app.use(cors());
 
-app.get('/cors/:url', (req, res) => {
-  var urlToGet = req.params.url;
+app.post('/cors/', (req, res) => {
+  var urlToGet = req.body.url;
   makeRequest("http://", urlToGet, function (error, response) {
     if (!error) {
-	    console.log(response)
+      console.log(response)
       res.send(response);
     } else {
       res.send(error);
