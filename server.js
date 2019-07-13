@@ -10,6 +10,7 @@ app.get('/cors/:url', (req, res) => {
   var urlToGet = req.params.url;
   makeRequest("http://", urlToGet, function (error, response) {
     if (!error) {
+	    console.log(response)
       res.send(response);
     } else {
       res.send(error);
